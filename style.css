@@ -58,6 +58,8 @@ body {
   
   li button {
     background-color: #dc3545;
+    margin-left: 250px;
+    margin-right: 250px;
   }
   
   li button:hover {
