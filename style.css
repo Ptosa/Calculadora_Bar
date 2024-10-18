@@ -63,3 +63,7 @@ body {
   li button:hover {
     background-color: #c82333;
   }
+
+  .atribuicaoItens {
+    margin: 10px;
+  }
