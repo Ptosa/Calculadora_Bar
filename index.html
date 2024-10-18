@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divisão de Conta de Bar</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Conta de Bar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1>Divisão de Conta de Bar</h1>
-  
-
-    <div class="section">
-      <h2>Pessoas</h2>
-      <input type="text" id="nomePessoa" placeholder="Nome da pessoa">
-      <button onclick="adicionarPessoa()">Adicionar Pessoa</button>
-      <ul id="listaPessoas"></ul>
+    <div class="container">
+        <h1>Divisão de Conta de Bar</h1>
+        
+        <div class="section">
+            <h2>Pessoas</h2>
+            <input type="text" id="nomePessoa" placeholder="Nome da pessoa">
+            <button onclick="adicionarPessoa()">Adicionar Pessoa</button>
+            <ul id="listaPessoas"></ul>
+        </div>
+        
+        <div class="section">
+            <h2>Itens</h2>
+            <input type="text" id="nomeItem" placeholder="Nome do item">
+            <input type="number" id="valorItem" placeholder="Valor do item">
+            <input type="number" id="quantidadeItem" placeholder="Quantidade do item">
+            <button onclick="adicionarItem()">Adicionar Item</button>
+            <ul id="listaItens"></ul>
+        </div>
+        
+        <div class="section">
+            <h2>Atribuição de Pessoas aos Itens</h2>
+            <div id="atribuicaoItens"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Taxa de Serviço</h2>
+            <input type="number" id="taxaServico" placeholder="Porcentagem da taxa de serviço">
+        </div>
+        
+        <div class="section">
+            <h2>Resultado</h2>
+            <button onclick="calcularDivisao()">Calcular Divisão</button>
+            <div id="resultado"></div>
+        </div>
     </div>
-
-    <div class="section">
-      <h2>Itens</h2>
-      <h3>NÃO USE VIRGULA, USE PONTO (12,10 ERRADO 12.10 CERTO)</h3>
-      <input type="text" id="nomeItem" placeholder="Nome do item">
-      <input type="number" id="valorItem" placeholder="Valor do item">
-      <input type="number" id="quantidadeItem" placeholder="Quantidade do item">
-      <button onclick="adicionarItem()">Adicionar Item</button>
-      <ul id="listaItens"></ul>
-    </div>
-
-    <div class="section">
-      <h2>Atribuição de Pessoas aos Itens</h2>
-      <div id="atribuicaoItens"></div>
-    </div>
-
-    <div class="section">
-      <h2>Resultado</h2>
-      <button onclick="calcularDivisao()">Calcular Divisão</button>
-      <div id="resultado"></div>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

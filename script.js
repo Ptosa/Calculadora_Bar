@@ -95,6 +95,7 @@ function atribuirPessoa(itemIndex, pessoa, isChecked) {
 
 function calcularDivisao() {
     let totalPorPessoa = {};
+    const taxaServico = parseFloat(document.getElementById('taxaServico').value) / 100 || 0;
 
     itens.forEach(item => {
         let valorPorPessoa = (item.valor * item.quantidade) / item.consumidores.length;
@@ -105,6 +106,10 @@ function calcularDivisao() {
             totalPorPessoa[pessoa] += valorPorPessoa;
         });
     });
+
+    for (const pessoa in totalPorPessoa) {
+        totalPorPessoa[pessoa] *= (1 + taxaServico);
+    }
 
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = '';
